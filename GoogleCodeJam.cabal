@@ -14,10 +14,13 @@ Stability:        Experimental
 category:       Text
 synopsis:      A monad for flexible parsing of Google Code Jam input files with automatic parallelization.
 description:
-   For more (including usage examples and solutions to GCJ problems) see <https://github.com/johannesgerer/buchhaltung Readme> on Github.
+   For more (including usage examples and solutions to GCJ problems) see <https://github.com/johannesgerer/GoogleCodeJam Readme> on Github.
 cabal-version:       >=1.10
 
 
+Extra-source-files:
+                   README.md
+                   stack.yaml
 library
   ghc-options:         -O2
   exposed-modules:     GCJ
