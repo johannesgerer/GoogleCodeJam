@@ -1,0 +1,33 @@
+
+
+
+import Control.Applicative
+import Control.Monad
+import Control.Arrow
+import Control.Monad.Trans.State.Lazy
+import GCJ
+import System.IO
+import Data.List
+import Data.Graph
+import qualified Data.Set as S
+import Data.Tuple
+import Data.Array
+import Text.Printf
+import Data.Function.Memoize
+import Data.Function
+
+
+  
+main = mainId $ do
+  w <-  words <$> (cLine >> cLine)
+  let graph = listArray (0,length w-1) $ fmap (S.fromList. (fst <$>) . flip filter w2 . f) w2
+      w2 = zip [0::(Int)..] w
+      f x y = fst x /= fst y && head (reverse (snd x)) == head (snd y)
+      l = length w
+      sol n g i = if n == l then 1::Int
+                  else S.foldl' (\a x-> a+(sol (n+1) (g//[(i,S.delete x next)]) x)) 0 next
+        where next = g!i
+  return $ show $ (graph,sum $ sol 1 graph <$> [0..l-1] )
+
+-- almost linear speedup!!!!!!!!!! .37 sec on i5 with 4 core 2,3 GHz
+-- fix is faster than memoFix2 (no memoization needed)

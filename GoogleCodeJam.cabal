@@ -2,7 +2,7 @@
 -- see http://haskell.org/cabal/users-guide/
 
 name:                GoogleCodeJam
-version:             0.0.1
+version:             0.0.3
 build-type:          Simple
 Bug-Reports:      http://github.com/johannesgerer/GoogleCodeJam/issues
 License:          MIT
