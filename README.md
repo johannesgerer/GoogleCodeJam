@@ -1,6 +1,6 @@
 # GoogleCodeJam [![Build Status](https://travis-ci.org/johannesgerer/GoogleCodeJam.svg?branch=master)](https://travis-ci.org/johannesgerer/GoogleCodeJam) [![Hackage](https://img.shields.io/hackage/v/GoogleCodeJam.svg)](https://hackage.haskell.org/package/GoogleCodeJam)
 
-A monad for flexible parsing of Google Code Jam input files with automatic parallelization.
+A monad written in Haskell for flexible parsing of Google Code Jam input files with automatic parallelization.
 
 Read the documentation on [Hackage](https://hackage.haskell.org/package/GoogleCodeJam/docs/GCJ.html).
 
